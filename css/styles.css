@@ -1,0 +1,227 @@
+:root {
+  --header-color: #83B3CD;
+  --main-color: #E4E4E5;
+  --text-color: black;
+  --style-color:white;
+   --footer-color: #83B3CD;
+   --font-size: 16px;
+   --font-weight: var(--font-weight);
+}
+body{
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 1.6;
+overflow-x: hidden;
+}
+.main-style{
+  background-color: var(--main-color);
+  position: relative;
+  bottom: 0;
+  padding: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+/*---------------------------navigation-bar---------------------------------*/
+.page-header {
+  display: flex;
+  background-color:  var(--header-color);
+	 }
+.page-header__item {
+    flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 80px;
+
+}
+.navigation-list {
+  list-style-type: none;
+
+}
+.navigation-list li {
+ display: inline-block;
+ margin-left: 15px;
+
+}
+/*---------------------------- profil-------------------------------*/
+.profile {
+  max-width: 700px;
+   margin: 0 auto;
+ }
+.profile__portrait{
+  float: left;
+  width: 200px;
+  margin: 60px ;
+  border-radius: 50%;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+
+/*--------------style--------------*/
+h1{
+  font-size:30px;
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+  text-decoration: underline;
+  font-style: italic;
+  text-align: center;
+  }
+
+ a {
+ color: var(--style-color);
+   font-weight: var(--font-weight);
+   text-decoration: none;
+ }
+a:visited {
+    color:  var(--style-color);
+      }
+a:hover, a:focus {
+    text-decoration: none;
+    list-style: circle;
+    font-weight:var(--font-weight);
+    color:  var(--text-color);;
+}
+  a:active {
+    color: var(--text-color);;
+      }
+a.navigation-list__item--active{
+color: var(--text-color);;}
+
+button,
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: grey;
+  color:  var(--style-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  border-color:  var(--style-color);
+  transition-duration: 0,2s opacity;
+
+}
+  button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: var(--font-size);
+}
+
+/*--------footer---------*/
+.page-footer {
+  display: flex;
+  clear: both;
+  height: auto;
+  background-color: var(--footer-color)  ;
+  flex-direction:  column;
+  display: flex;
+
+  color:  var(--style-color);
+ text-align: center;
+}
+/*----------------------about---------------*/
+ .about{
+
+   width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+ }
+ .second{
+   width: 100px;
+  height: 100px;
+
+  position: relative;
+  animation-name: second-animation;
+  animation-duration: 2s;
+ }
+ @keyframes second-animation {
+   0% { transform: translate(0px, 0px);      }
+  25% {   fill:var(--style-color) ; transform: translate(200px, 0px);     }
+  50% { fill: var(--style-color); transform: translate(200px, 200px);}
+  75% { transform: translate(0px, 200px);  }
+  100% {  transform: translate(0px, 0px);
+      }
+}
+ .sun {
+  animation-duration: 2s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+ @keyframes color-change {
+   0% {   transform: rotate(30deg) ;
+ }
+ 50% {   fill: #fcffad;
+ }
+ 100% {   fill: #f76414;
+ }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px) ;
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+table {
+    margin: 30px auto ;
+  }
+}
+/*---------------------work-----------------*/
+
+@media all and (max-width: 700 px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 700px) and (max-width:1700px){
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media all and (max-width: 1700px) {
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+  }
+  .grid__item {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+    border: 2px solid blue;
+}
+}
+a.work-link{
+  color:  var(--text-color);
+}
+.work-section{width: 80%; margin: 0 auto;}
+
+/*--------------------contact---------------*/
