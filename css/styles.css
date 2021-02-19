@@ -1,27 +1,30 @@
 :root {
-  --header-color: #83B3CD;
-  --main-color: #E4E4E5;
+  --header-color: #2E8B57;
+  --primary-color: white;
   --text-color: black;
-  --style-color:white;
-   --footer-color: #83B3CD;
    --font-size: 16px;
    --font-weight: var(--font-weight);
 }
 body{
-  background-color: white;
+  background-color: var(--primary-color);
+
+
+ 
   font-family: 'Lato', sans-serif;
   font-weight: var(--font-weight);
   font-size: var(--font-size);
   line-height: 1.6;
-overflow-x: hidden;
+  overflow-x: hidden;
+
 }
 .main-style{
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   position: relative;
   bottom: 0;
   padding: 1rem;
   max-width: 100%;
   height: auto;
+
 }
 /*---------------------------navigation-bar---------------------------------*/
 .page-header {
@@ -38,8 +41,7 @@ overflow-x: hidden;
 
 }
 .navigation-list {
-  list-style-type: none;
-
+  list-style-type: none
 }
 .navigation-list li {
  display: inline-block;
@@ -50,6 +52,7 @@ overflow-x: hidden;
 .profile {
   max-width: 700px;
    margin: 0 auto;
+
  }
 .profile__portrait{
   float: left;
@@ -73,35 +76,44 @@ h1{
   }
 
  a {
- color: var(--style-color);
+   color: var(--text-color);
    font-weight: var(--font-weight);
    text-decoration: none;
  }
 a:visited {
-    color:  var(--style-color);
+    color: var(--text-color);
       }
-a:hover, a:focus {
-    text-decoration: none;
-    list-style: circle;
-    font-weight:var(--font-weight);
-    color:  var(--text-color);;
+a:hover, a:focus{
+  text-decoration:  underline;
+   font-weight: lighter;
 }
   a:active {
-    color: var(--text-color);;
-      }
-a.navigation-list__item--active{
-color: var(--text-color);;}
+  font-weight: lighter;
+  text-decoration:  underline;
+        }
+
+  a.navigation-list__item:visited {
+     color:  white;
+           }
+
+    a.navigation-list__item--active{
+     color: var(--primary-color);
+    text-decoration:  underline;
+     font-size: 22px;
+     font-weight: lighter;}
+
 
 button,
 .button {
   border: none;
   font-family: inherit;
-  background-color: grey;
-  color:  var(--style-color);
+  background-color: var(--header-color);
+  color:  var(--primary-color);
+
   text-decoration: none;
   padding: 10px;
   border-radius: 20px;
-  border-color:  var(--style-color);
+  border-color:  var(--primary-color);
   transition-duration: 0,2s opacity;
 
 }
@@ -114,21 +126,24 @@ button:focus,
     font-size: var(--font-size);
 }
 
+a.button{color: var(--primary-color);
+  text-decoration: none;
+}
 /*--------footer---------*/
 .page-footer {
-  display: flex;
-  clear: both;
-  height: auto;
-  background-color: var(--footer-color)  ;
+/height: 100%;
   flex-direction:  column;
   display: flex;
+  color:  var(--primary-color);
+  text-align: center;
+  background-color: var(--header-color)  ;
+  bottom:0;
+  width:100%;
+  position: absolute;
 
-  color:  var(--style-color);
- text-align: center;
 }
 /*----------------------about---------------*/
  .about{
-
    width: 100%;
   height: auto;
   margin: 0 auto;
@@ -137,15 +152,15 @@ button:focus,
  .second{
    width: 100px;
   height: 100px;
-
+animation-iteration-count: infinite;
   position: relative;
   animation-name: second-animation;
   animation-duration: 2s;
  }
  @keyframes second-animation {
    0% { transform: translate(0px, 0px);      }
-  25% {   fill:var(--style-color) ; transform: translate(200px, 0px);     }
-  50% { fill: var(--style-color); transform: translate(200px, 200px);}
+  25% {   fill:var(--primary-color) ; transform: translate(200px, 0px);     }
+  50% { fill: var(--primary-color); transform: translate(200px, 200px);}
   75% { transform: translate(0px, 200px);  }
   100% {  transform: translate(0px, 0px);
       }
@@ -159,7 +174,7 @@ button:focus,
 }
 
  @keyframes color-change {
-   0% {   transform: rotate(30deg) ;
+   0% {    fill: #fcffad;
  }
  50% {   fill: #fcffad;
  }
@@ -193,9 +208,9 @@ button:focus,
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 table {
-    margin: 30px auto ;
-  }
+ margin: 50px auto;
 }
+
 /*---------------------work-----------------*/
 
 @media all and (max-width: 700 px) {
@@ -205,7 +220,7 @@ table {
 }
 @media all and (min-width: 700px) and (max-width:1700px){
   .grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media all and (max-width: 1700px) {
@@ -216,7 +231,7 @@ table {
   .grid__item {
     grid-column: auto / auto;
     grid-row: auto / auto;
-    border: 2px solid blue;
+    border: 2px solid var(--header-color) ;
 }
 }
 a.work-link{
