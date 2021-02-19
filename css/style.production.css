@@ -7,26 +7,31 @@
 
 body{
   background-color: white;
+
+
+
   font-family: 'Lato', sans-serif;
   font-weight: undefined;
   font-size: 16px;
   line-height: 1.6;
-overflow-x: hidden;
+  overflow-x: hidden;
+
 }
 .main-style{
-  background-color: #E4E4E5;
+  background-color: white;
   position: relative;
   bottom: 0;
   padding: 1rem;
   max-width: 100%;
   height: auto;
+
 }
 /*---------------------------navigation-bar---------------------------------*/
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color:  #83B3CD;
+  background-color:  #2E8B57;
 	 }
 .page-header__item {
     -webkit-box-flex: 0;
@@ -42,8 +47,7 @@ overflow-x: hidden;
 
 }
 .navigation-list {
-  list-style-type: none;
-
+  list-style-type: none
 }
 .navigation-list li {
  display: inline-block;
@@ -54,6 +58,7 @@ overflow-x: hidden;
 .profile {
   max-width: 700px;
    margin: 0 auto;
+
  }
 .profile__portrait{
   float: left;
@@ -78,36 +83,39 @@ h1{
   }
 
  a {
- color: white;
+   color: black;
    font-weight: undefined;
    text-decoration: none;
  }
 a:visited {
-    color:  white;
+    color: black;
       }
-a:hover {
-    text-decoration: none;
-    list-style: circle;
-    font-weight:undefined;
-    color:  black;;
-}
-a:focus {
-    text-decoration: none;
-    list-style: circle;
-    font-weight:undefined;
-    color:  black;;
+a:hover, a:focus{
+  text-decoration:  underline;
+   font-weight: lighter;
 }
   a:active {
-    color: black;;
-      }
-a.navigation-list__item--active{
-color: black;;}
+  font-weight: lighter;
+  text-decoration:  underline;
+        }
+
+  a.navigation-list__item:visited {
+     color:  white;
+           }
+
+    a.navigation-list__item--active{
+     color: white;
+    text-decoration:  underline;
+     font-size: 22px;
+     font-weight: lighter;}
+
 
 button {
   border: none;
   font-family: inherit;
-  background-color: grey;
+  background-color: #2E8B57;
   color:  white;
+
   text-decoration: none;
   padding: 10px;
   border-radius: 20px;
@@ -118,11 +126,13 @@ button {
 
 }
 
+
 .button {
   border: none;
   font-family: inherit;
-  background-color: grey;
+  background-color: #2E8B57;
   color:  white;
+
   text-decoration: none;
   padding: 10px;
   border-radius: 20px;
@@ -153,26 +163,29 @@ button {
     font-size: 16px;
 }
 
+a.button{color: white;
+  text-decoration: none;
+}
 /*--------footer---------*/
 .page-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  clear: both;
-  height: auto;
-  background-color: #83B3CD;
+/height: 100%;
   -webkit-box-orient:  vertical;
   -webkit-box-direction:  normal;
       -ms-flex-direction:  column;
           flex-direction:  column;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-
   color:  white;
- text-align: center;
+  text-align: center;
+  background-color: #2E8B57;
+  bottom:0;
+  width:100%;
+  position: absolute;
+
 }
 /*----------------------about---------------*/
  .about{
-
    width: 100%;
   height: auto;
   margin: 0 auto;
@@ -181,7 +194,8 @@ button {
  .second{
    width: 100px;
   height: 100px;
-
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
   position: relative;
   -webkit-animation-name: second-animation;
           animation-name: second-animation;
@@ -218,7 +232,7 @@ button {
 }
 
  @-webkit-keyframes color-change {
-   0% {   -webkit-transform: rotate(30deg) ;   transform: rotate(30deg) ;
+   0% {    fill: #fcffad;
  }
  50% {   fill: #fcffad;
  }
@@ -227,7 +241,7 @@ button {
 }
 
  @keyframes color-change {
-   0% {   -webkit-transform: rotate(30deg) ;   transform: rotate(30deg) ;
+   0% {    fill: #fcffad;
  }
  50% {   fill: #fcffad;
  }
@@ -292,8 +306,8 @@ button {
           animation: 34s cloud-move-reverse infinite alternate linear;
 }
 table {
-    margin: 30px auto ;
-  }
+ margin: 50px auto;
+}
 
 /*---------------------work-----------------*/
 
@@ -305,8 +319,8 @@ table {
 }
 @media all and (min-width: 700px) and (max-width:1700px){
   .grid {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media all and (max-width: 1700px) {
@@ -318,7 +332,7 @@ table {
   .grid__item {
     grid-column: auto / auto;
     grid-row: auto / auto;
-    border: 2px solid blue;
+    border: 2px solid #2E8B57;
 }
 }
 a.work-link{
