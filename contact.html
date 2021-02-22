@@ -5,12 +5,12 @@
     <title>contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="page-header">
-     <img src="img/Logo.svg" alt="logo" class="page-header__item" width="50px" height="50px">
+   <img src="img/Logo.svg" alt="logo" class="page-header_logo"      >
      <nav class="main-navigation page-header__item">
         <ul role="menubar" class="navigation-list">
            <li role="presentation">
@@ -27,12 +27,14 @@
            </li>
         </ul>
      </nav>
-  </header>
+  </header>  <div class="container">   <h1>contact</h1></div>
+
+   <div class="container1"></div>
    <main class="main-style">
-      <h1>Contact </h1>
+
       <div class="message-section">
         <p>Please add your contact information here</p>
-        <form action="" method="post">
+        <form action="/contact.php" method="post">
            <label for="contact-Email"> E-mail: </label><br>
            <input type="email" id="contact-Email" placeholder="Email*" required> <br>
            <br>
@@ -40,23 +42,23 @@
            <input type="tel" id="contact-Tel" placeholder="Tel*" pattern="\d{3}[\-]\d{3}[\-]\d{4}"> <br>
            <br>
            <label for="contact-Message"> Message: </label> <br>
-           <textarea maxlength="100" id="contact-Message" placeholder="Message*" required></textarea><br>
+           <textarea   id="contact-Message" maxlength="500" placeholder="Message*" required rows="8"></textarea><br>
            <br>
-           <input type="submit" value="Send message"><br>
 
+         <button type="submit" > Submit </button> <br>
         </form>
       </div>
       <div class="mycontact-section">
-           Mail: <a href="mailto:office@careerfoundry.com">office@careerfoundry.com</a><br>
-           Telephone: <a href="tel:+49 0152 0439 " aria-label="telephone number">>+49 0152 0439  </a><br>
+           Mail: <a href="wafachaari30@gmail.com">wafachaari30@gmail.com</a><br>
+           Telephone: <a href="tel:01520439 " aria-label="telephone number">+49 0152 0439  </a><br>
       </div>
    </main>
    <footer class="page-footer">
      <p>Find on me</p>
      <div class="social-media">
-     <img src="img/facebook.svg"  width="30px" height="30px" alt="facebook">
-     <img src="img/twitter.svg"  width="30px" height="30px" alt="twitter">
-     <img src="img/github.svg"  width="30px" height="30px" alt="Github">
+     <img src="img/facebook.svg" class="footer-logo"   alt="facebook">
+     <img src="img/twitter.svg"  class="footer-logo"   alt="twitter">
+     <img src="img/github.svg"  class="footer-logo"   alt="Github">
    </div>
    </footer >
    <script src="js/tota11y.min.js"></script>
