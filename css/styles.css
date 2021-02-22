@@ -72,8 +72,7 @@ h1 {
   font-size: 30px;
   color: var(--primary-color);
   font-style: italic;
-  position: relative;
-  left: 80px;
+  text-align: center;
 }
 
 a {
@@ -157,8 +156,10 @@ button:focus,
 
 .index-table {
   text-align: center;
-  width: 100%;
-  padding: 40px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* ----------------------about--------------- */
@@ -208,6 +209,14 @@ button:focus,
 }
 
 /* ---------------------work----------------- */
+
+@media all and (min-width: 600px) {
+  .index-table {
+    width: 70%;
+    padding: 40px;
+    margin: 0 auto;
+  }
+}
 
 @media all and (max-width: 700px) {
   .grid {
