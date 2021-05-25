@@ -226,7 +226,7 @@ button:focus,
 
 @media all and (min-width: 700px) and (max-width: 1700px) {
   .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -240,17 +240,37 @@ button:focus,
     grid-column: auto / auto;
     grid-row: auto / auto;
     border: 2px solid blue;
-    background-color: white;
+    background-color: lavender;
   }
 }
 
 a.work-link {
-  color: var(--text-color);
+  color: blau;
+  margin:3px;
+  font-weight: bold;
 }
 
 .work-section {
   width: 80%;
   margin: 0 auto;
+}
+
+.work-img {
+  margin-top: 12px;
+  margin-left: 12px;
+  width: 96%;
+  height: 300px;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.description-project {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
 }
 
 /* --------------------contact--------------- */
